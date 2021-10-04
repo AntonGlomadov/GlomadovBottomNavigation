@@ -1,28 +1,37 @@
 package com.example.glomadovbottomnavigation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.glomadovbottomnavigation.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.glomadovbottomnavigation.events.EventsFragment
+import com.example.glomadovbottomnavigation.holidays.HolidaysFragment
+import com.example.glomadovbottomnavigation.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setupBottomNavigationBar()
         setContentView(binding.root)
     }
+
     private fun setupBottomNavigationBar() {
         binding.botNav.setOnItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.navigation_events -> {openFragment(EventsFragment())
-                    true}
-                R.id.navigation_holidays -> {openFragment(HolidaysFragment())
-                    true}
-                R.id.navigation_profile -> {openFragment(HomeFragment())
-                    true}
+            when (item.itemId) {
+                R.id.navigation_events -> {
+                    openFragment(EventsFragment())
+                    true
+                }
+                R.id.navigation_holidays -> {
+                    openFragment(HolidaysFragment())
+                    true
+                }
+                R.id.navigation_profile -> {
+                    openFragment(HomeFragment())
+                    true
+                }
                 else -> true
             }
         }
