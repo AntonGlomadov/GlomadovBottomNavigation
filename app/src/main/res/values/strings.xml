@@ -8,4 +8,11 @@
     <string name="events_title">EVENTS</string>
     <string name="holidays_title">HOLIDAYS</string>
     <string name="home_title">HOME</string>
+    <string name="new_event_hint_title">Title</string>
+    <string name="new_event_hint_description">Description</string>
+    <string name="about_app_title">О приложении</string>
+    <string name="settings_fragment_title">Настройки</string>
+    <string name="settings_profile_redirect">Настройки</string>
+    <string name="about_profile_redirect">О приложении</string>
+    <string name="share_profile">Поделиться</string>
 </resources>

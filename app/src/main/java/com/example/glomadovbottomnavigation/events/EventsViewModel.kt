@@ -19,7 +19,4 @@ class EventsViewModel : ViewModel() {
 
     fun getEventList() = eventsList
 
-    fun updateEventList() {
-        eventsList.value = EventReminderDataObject.getEvents()
-    }
 }
